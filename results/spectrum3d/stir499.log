@@ -1,0 +1,267 @@
+PyTorch conda environment for use with DeltaAI (CUDA 12.9)
+
+Includes: jupyter, jupyterlab, matplotlib, pandas, scipy,
+          scikit-learn, nvitop, mpi4py, tensorboard, wandb
+
+Quick start (on compute node):
+  module load python/miniforge3_pytorch/2.10.0
+  conda activate base
+  python -c "import torch; print(torch.cuda.is_available())"
+
+For Jupyter notebook support (Open OnDemand):
+  setup-kernel
+
+== 3D Riemannian Hessian spectrum: n = 499^3, L = 8.0, beta = 1600, V = stirrer, h = 0.0320 ==
+  [gs] it    1  E 9.906724868387  |grad|_au 1.892e+00  t 1.244
+  [gs] it   10  E 9.012949613946  |grad|_au 3.818e-02  t 0.969
+  [gs] it   20  E 9.012257225494  |grad|_au 1.180e-03  t 0.954
+  [gs] it   30  E 9.012256553968  |grad|_au 3.818e-05  t 0.955
+  [gs] it   40  E 9.012256553262  |grad|_au 1.211e-06  t 1.061
+  [gs] it   50  E 9.012256553261  |grad|_au 5.986e-08  t 1.625
+  [gs] it   60  E 9.012256553261  |grad|_au 9.077e-09  t 1.708
+  [gs] it   70  E 9.012256553261  |grad|_au 6.895e-08  t 1.305
+  [gs] it   80  E 9.012256553261  |grad|_au 4.037e-09  t 0.834
+  [newton] 0  |F|_h 2.700e-09  lam 23.358241825422
+  [newton] 1  |F|_h 5.182e-12  lam 23.358241825522
+  [newton] 2  |F|_h 2.209e-12  lam 23.358241825522
+  [newton] 3  |F|_h 1.695e-12  lam 23.358241825522
+  [newton] 4  |F|_h 1.558e-12  lam 23.358241825522
+  [newton] 5  |F|_h 1.539e-12  lam 23.358241825522
+  [newton] 6  |F|_h 1.522e-12  lam 23.358241825522
+  [newton] 7  |F|_h 1.503e-12  lam 23.358241825522
+  [gs] done in 233.6s: E 9.012256553261  lam1 23.3582418255  |F|_h 1.51e-12  min u -2.71e-15
+    [lobpcg lam2(A_beta)] it   1  theta 5.9874968325e+03  res 1.92e-01  (0s)
+    [lobpcg lam2(A_beta)] it  10  theta 2.3900820657e+01  res 5.98e-02  (3s)
+    [lobpcg lam2(A_beta)] it  20  theta 2.3552254830e+01  res 2.14e-02  (7s)
+    [lobpcg lam2(A_beta)] it  30  theta 2.3536177274e+01  res 6.15e-03  (10s)
+    [lobpcg lam2(A_beta)] it  40  theta 2.3534171308e+01  res 1.62e-03  (14s)
+    [lobpcg lam2(A_beta)] it  50  theta 2.3533991336e+01  res 3.99e-04  (17s)
+    [lobpcg lam2(A_beta)] it  60  theta 2.3533984345e+01  res 9.34e-05  (21s)
+    [lobpcg lam2(A_beta)] it  70  theta 2.3533983549e+01  res 1.93e-05  (24s)
+    [lobpcg lam2(A_beta)] it  80  theta 2.3533983527e+01  res 4.73e-06  (28s)
+    [lobpcg lam2(A_beta)] it  90  theta 2.3533983524e+01  res 1.52e-06  (31s)
+    [lobpcg lam1(A_3beta)] it   1  theta 5.9882828139e+03  res 1.92e-01  (0s)
+    [lobpcg lam1(A_3beta)] it  10  theta 3.2998240015e+01  res 7.96e-02  (3s)
+    [lobpcg lam1(A_3beta)] it  20  theta 2.9758328887e+01  res 4.17e-02  (6s)
+    [lobpcg lam1(A_3beta)] it  30  theta 2.9616673154e+01  res 8.93e-03  (10s)
+    [lobpcg lam1(A_3beta)] it  40  theta 2.9577203613e+01  res 4.63e-03  (13s)
+    [lobpcg lam1(A_3beta)] it  50  theta 2.9566115901e+01  res 2.66e-03  (16s)
+    [lobpcg lam1(A_3beta)] it  60  theta 2.9560276546e+01  res 2.58e-03  (19s)
+    [lobpcg lam1(A_3beta)] it  70  theta 2.9556927998e+01  res 2.01e-03  (23s)
+    [lobpcg lam1(A_3beta)] it  80  theta 2.9555386964e+01  res 1.73e-03  (26s)
+    [lobpcg lam1(A_3beta)] it  90  theta 2.9554798808e+01  res 1.66e-03  (29s)
+    [lobpcg lam1(A_3beta)] it 100  theta 2.9554646448e+01  res 2.52e-03  (33s)
+    [lobpcg lam1(A_3beta)] it 110  theta 2.9554574714e+01  res 1.03e-03  (36s)
+    [lobpcg lam1(A_3beta)] it 120  theta 2.9554562829e+01  res 8.10e-04  (39s)
+    [lobpcg lam1(A_3beta)] it 130  theta 2.9554561556e+01  res 4.44e-04  (43s)
+    [lobpcg lam1(A_3beta)] it 140  theta 2.9554560836e+01  res 3.46e-04  (46s)
+    [lobpcg lam1(A_3beta)] it 150  theta 2.9554560370e+01  res 2.57e-04  (49s)
+    [lobpcg lam1(A_3beta)] it 160  theta 2.9554560130e+01  res 2.02e-04  (53s)
+    [lobpcg lam1(A_3beta)] it 170  theta 2.9554559941e+01  res 3.42e-04  (56s)
+    [lobpcg lam1(A_3beta)] it 180  theta 2.9554559817e+01  res 3.46e-04  (59s)
+    [lobpcg lam1(A_3beta)] it 190  theta 2.9554559802e+01  res 2.16e-04  (62s)
+    [lobpcg lam1(A_3beta)] it 200  theta 2.9554559800e+01  res 1.95e-04  (66s)
+    [lobpcg lam1(A_0)] it   1  theta 5.9871037595e+03  res 1.92e-01  (0s)
+    [lobpcg lam1(A_0)] it  10  theta 6.8099681681e+00  res 2.20e-01  (3s)
+    [lobpcg lam1(A_0)] it  20  theta 6.7874645224e+00  res 3.39e-02  (6s)
+    [lobpcg lam1(A_0)] it  30  theta 6.7874520072e+00  res 2.95e-03  (9s)
+    [lobpcg lam1(A_0)] it  40  theta 6.7874520031e+00  res 2.66e-04  (12s)
+  lam1 = 23.35824183  lam2 = 23.53398352  lam1(A_3b) = 29.55455980  lam1(A_0) = 6.78745200   (115s)
+    [lobpcg sigma_T] it   1  theta 5.9649246264e+03  res 1.93e-01  (0s)
+    [lobpcg sigma_T] it  10  theta 6.2708842785e+00  res 1.58e-01  (24s)
+    [lobpcg sigma_T] it  20  theta 6.2444400771e+00  res 9.45e-03  (50s)
+    [lobpcg sigma_T] it  30  theta 6.2444028818e+00  res 6.23e-03  (76s)
+    [lobpcg sigma_T] it  40  theta 6.2444028494e+00  res 6.22e-03  (103s)
+    [lobpcg sigma_T] restart 1 at res 6.2e-03
+    [lobpcg sigma_T] it  50  theta 6.2444028494e+00  res 6.22e-03  (128s)
+    [lobpcg sigma_T] it  60  theta 6.2444028494e+00  res 6.22e-03  (154s)
+    [lobpcg sigma_T] restart 2 at res 6.2e-03
+    [lobpcg sigma_T] it  70  theta 6.2444028494e+00  res 6.22e-03  (179s)
+  sigma_T = 6.24440285   sigma_T/lam1^(1/3) = 2.1845
+    [lobpcg h1 min] it   1  theta 1.0146347451e+00  res 6.71e-03  (0s)
+    [lobpcg h1 min] it  10  theta 2.8150455071e-01  res 2.25e-01  (23s)
+    [lobpcg h1 min] it  20  theta 2.8028998583e-01  res 1.68e-02  (51s)
+    [lobpcg h1 min] it  30  theta 2.8027752431e-01  res 5.11e-03  (80s)
+    [lobpcg h1 min] it  40  theta 2.8027750097e-01  res 5.07e-03  (109s)
+    [lobpcg h1 min] it  50  theta 2.8027750097e-01  res 5.07e-03  (138s)
+    [lobpcg h1 min] restart 1 at res 5.1e-03
+    [lobpcg h1 min] it  60  theta 2.8027750097e-01  res 5.07e-03  (165s)
+    [lobpcg h1 min] restart 2 at res 5.1e-03
+    [lobpcg h1 min] it  70  theta 2.8027750097e-01  res 5.07e-03  (192s)
+    [lobpcg h1 max] it   1  theta 9.9271585951e-01  res 3.22e-01  (0s)
+    [lobpcg h1 max] it  10  theta 1.2366942802e-01  res 1.48e-01  (5s)
+    [lobpcg h1 max] it  20  theta 9.0610472325e-02  res 5.59e-02  (10s)
+    [lobpcg h1 max] it  30  theta 8.9480055202e-02  res 1.75e-03  (15s)
+    [lobpcg h1 max] it  40  theta 8.9480050525e-02  res 3.54e-02  (21s)
+    [lobpcg h1 max] restart 1 at res 1.4e-03
+    [lobpcg h1 max] it  50  theta 8.9480050525e-02  res 1.35e-04  (26s)
+  [h1    ] rho_min = 2.802775e-01  rho_max = 11.175675  kappa = 39.87   (lobpcg 76/58 its settled/settled, res 5.1e-03/1.3e-06, drift 4.0e-16/6.0e-12, 244s)
+           zeta_- = 18.2078  zeta_+ = 337.5759  bound: rho_min >= 2.5537e-01
+    [lobpcg a0 min] it   1  theta 9.9629550573e-01  res 8.30e-04  (0s)
+    [lobpcg a0 min] it  10  theta 2.3564507433e-01  res 4.84e-02  (28s)
+    [lobpcg a0 min] it  20  theta 2.3503741560e-01  res 7.23e-03  (61s)
+    [lobpcg a0 min] it  30  theta 2.3503101748e-01  res 4.17e-03  (93s)
+    [lobpcg a0 min] it  40  theta 2.3503099604e-01  res 4.17e-03  (126s)
+    [lobpcg a0 min] it  50  theta 2.3503099594e-01  res 4.17e-03  (158s)
+    [lobpcg a0 min] restart 1 at res 4.2e-03
+    [lobpcg a0 min] it  60  theta 2.3503099594e-01  res 4.17e-03  (187s)
+    [lobpcg a0 min] restart 2 at res 4.2e-03
+    [lobpcg a0 min] it  70  theta 2.3503099594e-01  res 4.17e-03  (217s)
+    [lobpcg a0 min] it  80  theta 2.3503099594e-01  res 4.17e-03  (248s)
+    [lobpcg a0 max] it   1  theta 9.7055913572e-01  res 4.96e-01  (0s)
+    [lobpcg a0 max] it  10  theta 2.0472036642e-01  res 1.44e-01  (14s)
+    [lobpcg a0 max] it  20  theta 2.0472036497e-01  res 1.44e-01  (31s)
+    [lobpcg a0 max] restart 1 at res 1.4e-01
+    [lobpcg a0 max] it  30  theta 2.0472036497e-01  res 1.44e-01  (46s)
+    [lobpcg a0 max] restart 2 at res 1.4e-01
+    [lobpcg a0 max] it  40  theta 2.0472036497e-01  res 1.44e-01  (62s)
+  [a0    ] rho_min = 2.350310e-01  rho_max = 4.884712  kappa = 20.78   (lobpcg 80/49 its settled/settled, res 4.2e-03/1.4e-01, drift 1.2e-16/5.4e-16, 330s)
+           zeta_- = 23.3582  zeta_+ = 39.4601  bound: rho_min >= 2.1094e-01
+    [lobpcg a0mod min] it   1  theta 9.9641852172e-01  res 8.90e-04  (0s)
+    [lobpcg a0mod min] it  10  theta 2.3565769717e-01  res 4.75e-02  (28s)
+    [lobpcg a0mod min] it  20  theta 2.3506440579e-01  res 6.14e-03  (61s)
+    [lobpcg a0mod min] it  30  theta 2.3505954849e-01  res 4.02e-03  (93s)
+    [lobpcg a0mod min] it  40  theta 2.3505953124e-01  res 4.01e-03  (126s)
+    [lobpcg a0mod min] it  50  theta 2.3505953115e-01  res 4.02e-03  (159s)
+    [lobpcg a0mod min] restart 1 at res 4.0e-03
+    [lobpcg a0mod min] it  60  theta 2.3505953115e-01  res 4.02e-03  (189s)
+    [lobpcg a0mod min] restart 2 at res 4.0e-03
+    [lobpcg a0mod min] it  70  theta 2.3505953115e-01  res 4.02e-03  (220s)
+    [lobpcg a0mod min] it  80  theta 2.3505953115e-01  res 4.02e-03  (253s)
+    [lobpcg a0mod max] it   1  theta 9.0170428413e-01  res 5.05e-01  (0s)
+    [lobpcg a0mod max] it  10  theta 1.7517797785e-01  res 1.94e-01  (5s)
+    [lobpcg a0mod max] it  20  theta 1.7517797635e-01  res 1.94e-01  (10s)
+    [lobpcg a0mod max] restart 1 at res 1.9e-01
+    [lobpcg a0mod max] it  30  theta 1.7517797635e-01  res 1.94e-01  (15s)
+    [lobpcg a0mod max] restart 2 at res 1.9e-01
+    [lobpcg a0mod max] it  40  theta 1.7517797635e-01  res 1.94e-01  (21s)
+  [a0mod ] rho_min = 2.350595e-01  rho_max = 5.708480  kappa = 24.29   (lobpcg 80/49 its settled/settled, res 4.0e-03/1.9e-01, drift 4.7e-16/6.3e-16, 283s)
+           zeta_- = 23.3582  zeta_+ = 39.9395  bound: rho_min >= 2.1094e-01
+    [lobpcg au min] it   1  theta 9.9623010946e-01  res 7.66e-04  (0s)
+    [lobpcg au min] it  10  theta 2.2807719473e-01  res 3.81e-02  (27s)
+    [lobpcg au min] it  20  theta 2.2748238663e-01  res 5.73e-03  (58s)
+    [lobpcg au min] it  30  theta 2.2748059832e-01  res 4.39e-03  (89s)
+    [lobpcg au min] it  40  theta 2.2748059646e-01  res 4.39e-03  (121s)
+    [lobpcg au min] it  50  theta 2.2748059644e-01  res 4.39e-03  (151s)
+    [lobpcg au min] restart 1 at res 4.4e-03
+    [lobpcg au min] it  60  theta 2.2748059644e-01  res 4.39e-03  (180s)
+    [lobpcg au min] restart 2 at res 4.4e-03
+    [lobpcg au min] it  70  theta 2.2748059644e-01  res 4.39e-03  (208s)
+    [lobpcg au max] it   1  theta 1.0019107914e+00  res 3.35e-01  (0s)
+    [lobpcg au max] it  10  theta 6.5156801898e-01  res 3.39e-02  (14s)
+    [lobpcg au max] it  20  theta 6.5142602584e-01  res 3.23e-02  (32s)
+    [lobpcg au max] it  30  theta 6.5142602542e-01  res 3.23e-02  (49s)
+    [lobpcg au max] restart 1 at res 3.2e-02
+    [lobpcg au max] it  40  theta 6.5142602542e-01  res 3.23e-02  (66s)
+    [lobpcg au max] restart 2 at res 3.2e-02
+    [lobpcg au max] it  50  theta 6.5142602542e-01  res 3.23e-02  (83s)
+  [au    ] rho_min = 2.274806e-01  rho_max = 1.535094  kappa = 6.748   (lobpcg 77/59 its settled/settled, res 4.4e-03/3.2e-02, drift 7.3e-16/0.0e+00, 333s)
+           zeta_- = 23.3582  zeta_+ = 18.5207  bound: rho_min >= 2.1094e-01
+    [lobpcg a2u min] it   1  theta 9.9616472164e-01  res 7.29e-04  (0s)
+    [lobpcg a2u min] it  10  theta 2.2007381245e-01  res 9.53e-02  (26s)
+    [lobpcg a2u min] it  20  theta 2.1943910079e-01  res 7.34e-03  (55s)
+    [lobpcg a2u min] it  30  theta 2.1943765842e-01  res 4.64e-03  (83s)
+    [lobpcg a2u min] it  40  theta 2.1943765748e-01  res 4.64e-03  (112s)
+    [lobpcg a2u min] restart 1 at res 4.6e-03
+    [lobpcg a2u min] it  50  theta 2.1943765721e-01  res 4.64e-03  (141s)
+    [lobpcg a2u min] it  60  theta 2.1943765748e-01  res 4.64e-03  (171s)
+    [lobpcg a2u min] restart 2 at res 4.6e-03
+    [lobpcg a2u min] it  70  theta 2.1943765748e-01  res 4.64e-03  (199s)
+    [lobpcg a2u max] it   1  theta 1.0019440578e+00  res 2.35e-01  (0s)
+    [lobpcg a2u max] it  10  theta 1.0004060533e+00  res 1.91e-04  (14s)
+    [lobpcg a2u max] it  20  theta 1.0003779913e+00  res 1.69e-04  (34s)
+    [lobpcg a2u max] it  30  theta 1.0003478653e+00  res 1.57e-04  (53s)
+    [lobpcg a2u max] it  40  theta 1.0003251494e+00  res 1.42e-04  (71s)
+    [lobpcg a2u max] it  50  theta 1.0003099716e+00  res 1.27e-04  (90s)
+    [lobpcg a2u max] it  60  theta 1.0002946593e+00  res 1.15e-04  (108s)
+    [lobpcg a2u max] it  70  theta 1.0002847662e+00  res 1.05e-04  (126s)
+    [lobpcg a2u max] it  80  theta 1.0002748755e+00  res 9.79e-05  (144s)
+    [lobpcg a2u max] it  90  theta 1.0002675820e+00  res 8.88e-05  (161s)
+    [lobpcg a2u max] it 100  theta 1.0002612334e+00  res 8.29e-05  (179s)
+    [lobpcg a2u max] it 110  theta 1.0002555519e+00  res 7.72e-05  (198s)
+    [lobpcg a2u max] it 120  theta 1.0002510214e+00  res 7.04e-05  (216s)
+    [lobpcg a2u max] it 130  theta 1.0002469209e+00  res 6.77e-05  (234s)
+    [lobpcg a2u max] it 140  theta 1.0002433724e+00  res 6.18e-05  (252s)
+    [lobpcg a2u max] it 150  theta 1.0002403697e+00  res 5.89e-05  (270s)
+    [lobpcg a2u max] it 160  theta 1.0002375989e+00  res 5.54e-05  (288s)
+    [lobpcg a2u max] it 170  theta 1.0002352293e+00  res 5.16e-05  (307s)
+    [lobpcg a2u max] it 180  theta 1.0002331678e+00  res 4.95e-05  (325s)
+    [lobpcg a2u max] it 190  theta 1.0002312023e+00  res 4.66e-05  (344s)
+    [lobpcg a2u max] it 200  theta 1.0002295762e+00  res 4.40e-05  (362s)
+    [lobpcg a2u max] it 210  theta 1.0002280372e+00  res 4.21e-05  (381s)
+    [lobpcg a2u max] it 220  theta 1.0002266956e+00  res 3.99e-05  (399s)
+    [lobpcg a2u max] it 230  theta 1.0002254600e+00  res 3.81e-05  (417s)
+    [lobpcg a2u max] it 240  theta 1.0002243397e+00  res 3.63e-05  (435s)
+    [lobpcg a2u max] it 250  theta 1.0002233493e+00  res 3.47e-05  (454s)
+    [lobpcg a2u max] it 260  theta 1.0002224220e+00  res 3.34e-05  (472s)
+    [lobpcg a2u max] it 270  theta 1.0002215844e+00  res 3.15e-05  (490s)
+    [lobpcg a2u max] it 280  theta 1.0002208420e+00  res 3.06e-05  (509s)
+    [lobpcg a2u max] it 290  theta 1.0002201212e+00  res 2.94e-05  (527s)
+    [lobpcg a2u max] it 300  theta 1.0002194877e+00  res 2.79e-05  (545s)
+  [a2u   ] rho_min = 2.194377e-01  rho_max = 0.999781  kappa = 4.556   (lobpcg 75/300 its settled/maxit, res 4.6e-03/2.8e-05, drift 6.3e-16/7.0e-07, 766s)
+           zeta_- = 23.3582  zeta_+ = 0.0000  bound: rho_min >= 2.1094e-01
+    [lobpcg a3u min] it   1  theta 9.9609934228e-01  res 7.26e-04  (0s)
+    [lobpcg a3u min] it  10  theta 2.1164594111e-01  res 1.25e-01  (25s)
+    [lobpcg a3u min] it  20  theta 2.1094170108e-01  res 7.46e-03  (53s)
+    [lobpcg a3u min] it  30  theta 2.1094070964e-01  res 4.92e-03  (81s)
+    [lobpcg a3u min] it  40  theta 2.1094070878e-01  res 4.91e-03  (110s)
+    [lobpcg a3u min] restart 1 at res 4.9e-03
+    [lobpcg a3u min] it  50  theta 2.1094070853e-01  res 4.91e-03  (136s)
+    [lobpcg a3u min] it  60  theta 2.1094070878e-01  res 4.91e-03  (164s)
+    [lobpcg a3u min] restart 2 at res 4.9e-03
+    [lobpcg a3u min] it  70  theta 2.1094070878e-01  res 4.91e-03  (190s)
+    [lobpcg a3u max] it   1  theta 1.0019773243e+00  res 1.72e-01  (0s)
+    [lobpcg a3u max] it  10  theta 1.0019704255e+00  res 6.28e-05  (15s)
+    [lobpcg a3u max] it  20  theta 1.0019667975e+00  res 4.02e-05  (36s)
+    [lobpcg a3u max] it  30  theta 1.0019649357e+00  res 2.93e-05  (57s)
+    [lobpcg a3u max] it  40  theta 1.0019630726e+00  res 2.41e-05  (77s)
+    [lobpcg a3u max] it  50  theta 1.0019616700e+00  res 2.00e-05  (98s)
+    [lobpcg a3u max] it  60  theta 1.0019604322e+00  res 1.62e-05  (118s)
+    [lobpcg a3u max] it  70  theta 1.0019596579e+00  res 1.32e-05  (138s)
+    [lobpcg a3u max] it  80  theta 1.0019590391e+00  res 1.24e-05  (158s)
+    [lobpcg a3u max] it  90  theta 1.0019584586e+00  res 1.16e-05  (178s)
+    [lobpcg a3u max] it 100  theta 1.0019579688e+00  res 1.10e-05  (199s)
+    [lobpcg a3u max] it 110  theta 1.0019575513e+00  res 1.04e-05  (219s)
+    [lobpcg a3u max] it 120  theta 1.0019571953e+00  res 1.08e-05  (239s)
+    [lobpcg a3u max] it 130  theta 1.0019567898e+00  res 1.17e-05  (260s)
+    [lobpcg a3u max] it 140  theta 1.0019563767e+00  res 1.26e-05  (280s)
+    [lobpcg a3u max] it 150  theta 1.0019559709e+00  res 1.36e-05  (301s)
+    [lobpcg a3u max] it 160  theta 1.0019555754e+00  res 1.51e-05  (321s)
+    [lobpcg a3u max] it 170  theta 1.0019551334e+00  res 1.75e-05  (342s)
+    [lobpcg a3u max] it 180  theta 1.0019546474e+00  res 1.92e-05  (362s)
+    [lobpcg a3u max] it 190  theta 1.0019541900e+00  res 1.98e-05  (382s)
+    [lobpcg a3u max] it 200  theta 1.0019537590e+00  res 1.97e-05  (403s)
+    [lobpcg a3u max] it 210  theta 1.0019533428e+00  res 1.94e-05  (423s)
+    [lobpcg a3u max] it 220  theta 1.0019529321e+00  res 1.83e-05  (443s)
+    [lobpcg a3u max] it 230  theta 1.0019525700e+00  res 1.66e-05  (464s)
+    [lobpcg a3u max] it 240  theta 1.0019522575e+00  res 1.53e-05  (484s)
+    [lobpcg a3u max] it 250  theta 1.0019519758e+00  res 1.43e-05  (504s)
+    [lobpcg a3u max] it 260  theta 1.0019517089e+00  res 1.37e-05  (525s)
+    [lobpcg a3u max] it 270  theta 1.0019514635e+00  res 1.28e-05  (545s)
+    [lobpcg a3u max] it 280  theta 1.0019512451e+00  res 1.22e-05  (566s)
+    [lobpcg a3u max] it 290  theta 1.0019510347e+00  res 1.20e-05  (586s)
+    [lobpcg a3u max] it 300  theta 1.0019508257e+00  res 1.21e-05  (606s)
+  [a3u   ] rho_min = 2.109407e-01  rho_max = 0.998053  kappa = 4.731   (lobpcg 75/300 its settled/maxit, res 4.9e-03/1.2e-05, drift 7.9e-16/2.3e-07, 815s)
+           zeta_- = 23.3582  zeta_+ = 0.0000  bound: rho_min >= 2.1094e-01
+    [lobpcg tf min] it   1  theta 9.9975498852e-01  res 5.00e-05  (0s)
+    [lobpcg tf min] it  10  theta 7.8139411920e-01  res 4.04e-02  (26s)
+    [lobpcg tf min] it  20  theta 7.7855434262e-01  res 4.51e-03  (56s)
+    [lobpcg tf min] it  30  theta 7.7854888836e-01  res 3.93e-03  (85s)
+    [lobpcg tf min] it  40  theta 7.7854888542e-01  res 3.93e-03  (115s)
+    [lobpcg tf min] restart 1 at res 3.9e-03
+    [lobpcg tf min] it  50  theta 7.7854888542e-01  res 3.93e-03  (142s)
+    [lobpcg tf min] restart 2 at res 3.9e-03
+    [lobpcg tf min] it  60  theta 7.7854888542e-01  res 3.93e-03  (169s)
+    [lobpcg tf min] it  70  theta 7.7854888542e-01  res 3.93e-03  (197s)
+    [lobpcg tf max] it   1  theta 1.0001237482e+00  res 2.62e-02  (0s)
+    [lobpcg tf max] it  10  theta 1.0000075839e+00  res 5.74e-05  (22s)
+    [lobpcg tf max] it  20  theta 9.8748148007e-01  res 3.58e-03  (49s)
+    [lobpcg tf max] it  30  theta 9.8615421228e-01  res 2.29e-03  (74s)
+    [lobpcg tf max] it  40  theta 9.8613953434e-01  res 3.46e-03  (100s)
+    [lobpcg tf max] it  50  theta 9.8613924534e-01  res 8.10e-04  (125s)
+    [lobpcg tf max] it  60  theta 9.8613924458e-01  res 8.10e-04  (151s)
+  [tf    ] rho_min = 7.785489e-01  rho_max = 1.014056  kappa = 1.302   (lobpcg 72/65 its settled/settled, res 3.9e-03/8.1e-04, drift 1.4e-16/6.5e-11, 371s)
+           zeta_- = 3.8309  zeta_+ = 1.8998  bound: rho_min >= 6.1977e-01
+  lower bounds: 1 - lam1/lam2 = 7.4676e-03   1 - lam1/lam1(A_3b) = 2.0966e-01   (lam1(A_3b) - lam1)/lam1^(1/3) = 2.1676
+total 3689.7s
+=== ALL DONE stir499 ===

@@ -1,0 +1,31 @@
+PyTorch conda environment for use with DeltaAI (CUDA 12.9)
+
+Includes: jupyter, jupyterlab, matplotlib, pandas, scipy,
+          scikit-learn, nvitop, mpi4py, tensorboard, wandb
+
+Quick start (on compute node):
+  module load python/miniforge3_pytorch/2.10.0
+  conda activate base
+  python -c "import torch; print(torch.cuda.is_available())"
+
+For Jupyter notebook support (Open OnDemand):
+  setup-kernel
+
+n=25, lam1=23.3311407925, |F|=1.27e-14
+dense N built and projected (15s), sigma_T(dense) = 6.0367682326
+                              sigma_T(lobpcg) = 6.0367682327
+[h1    ] dense  rho_min 0.2707911580  rho_max 11.3337178736  kappa 41.854091
+          lobpcg rho_min 0.2707911580  rho_max 11.3337178736  kappa 41.854091   rel.err 1.55e-11 / 1.14e-12  (79/37 its settled/settled)
+[a0    ] dense  rho_min 0.2279130857  rho_max 5.1772944180  kappa 22.716091
+          lobpcg rho_min 0.2279130857  rho_max 5.1772944180  kappa 22.716091   rel.err 6.14e-12 / 8.36e-13  (85/50 its settled/settled)
+[a0mod ] dense  rho_min 0.2279479617  rho_max 6.0709732854  kappa 26.633155
+          lobpcg rho_min 0.2279479618  rho_max 6.0709732854  kappa 26.633155   rel.err 8.02e-12 / 4.50e-12  (85/50 its settled/settled)
+[au    ] dense  rho_min 0.2209500777  rho_max 1.5648040343  kappa 7.082161
+          lobpcg rho_min 0.2209500777  rho_max 1.5648040343  kappa 7.082161   rel.err 8.20e-12 / 4.87e-12  (72/61 its settled/settled)
+[a2u   ] dense  rho_min 0.2134819657  rho_max 0.9601151540  kappa 4.497406
+          lobpcg rho_min 0.2134819657  rho_max 0.9601151540  kappa 4.497406   rel.err 4.36e-12 / 1.16e-11  (72/88 its settled/settled)
+[a3u   ] dense  rho_min 0.2055566240  rho_max 0.9323295383  kappa 4.535634
+          lobpcg rho_min 0.2055566240  rho_max 0.9323295383  kappa 4.535634   rel.err 4.87e-12 / 3.63e-11  (77/105 its settled/settled)
+[tf    ] dense  rho_min 0.7674990881  rho_max 1.0663600636  kappa 1.389396
+          lobpcg rho_min 0.7674990881  rho_max 1.0663600635  kappa 1.389396   rel.err 8.02e-12 / 2.38e-12  (65/53 its settled/settled)
+=== ALL DONE dense25 ===

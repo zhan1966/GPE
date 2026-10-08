@@ -1,0 +1,5 @@
+bvp status: 0 The algorithm converged to the desired accuracy.
+inf W0 = 1.2333620396913485  (Gallo-Pelinovsky Lemma 2.2: > 0)
+first eigenvalues mu_k of M0 = -4 d2 + 3 nu0^2 - y : [2.41053338 4.50818744 6.27345377 7.84004781]
+check nu0 at y = 0: 0.6540293315056278  residual of ODE (max): 5.396380576838666e-07
+measured (lam1(A_3b)-lam1)/lam1^(1/3) in 1D at beta=3e5: 2.408 ; at 2D beta=1e4: 2.35

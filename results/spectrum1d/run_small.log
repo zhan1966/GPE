@@ -1,0 +1,60 @@
+
+=== beta = 1   (L = 6.0, N = 3000, h = 0.0040, time 92.8s) ===
+  lam1(A_b) = 1.38348   lam2(A_b) = 3.20149   gap = 1.818   R_TF = sqrt(lam1) = 1.176
+  lam1(A_3b) = 2.11762   lam1(A_3b)-lam1 = 0.7341   mu1 (constrained L2-Hessian gap) = 2.196
+  lam1(A_0) = 0.999999   beta*max u^2 = 0.5312  (max principle: <= lam1)  min u = 7.5e-10
+  [a_u   ] rho_min = 0.67509  rho_max = 1  kappa = 1.481  | argmax|eta_min| at x = -1.29
+           lower bounds: paper 1-lam1/lam2 = 0.568   new mu1/(mu1+|Z-|) = 0.6135   new explicit 1-lam1/lam1(A_3b) = 0.3467
+           upper bounds: paper 3 ;  monotone 1+lam1/lam2 = 1.432 ;  1+|Z+|/lam2 = 1
+  [a_0   ] rho_min = 0.70303  rho_max = 1.0038  kappa = 1.428  | argmax|eta_min| at x = -1.39
+           lower bounds: paper 1-lam1/lam2 = 0.568   new mu1/(mu1+|Z-|) = 0.6135   new explicit 1-lam1/lam1(A_3b) = 0.3467
+           upper bounds: paper 1+3 beta max u^2/lam1(A_0) = 2.593 ; monotone 1+2 lam1/lam1(A_0) = 3.767 ; 1+|Z+|/lam_T(A_0) = 1.07
+  [H1_0  ] rho_min = 1  rho_max = 38.535  kappa = 38.54  | argmax|eta_min| at x = +0.62
+           lower bounds: paper 1-lam1/lam2 = 0.568   new mu1/(mu1+|Z-|) = 1
+           upper bounds: paper 1+max(V+3 beta u^2)/(lam1(-Lap)+alpha) = 525.5 ; 1+|Z+|/lam1(G^-1) = 505.4
+
+=== beta = 10   (L = 6.446792275730539, N = 3000, h = 0.0043, time 82.0s) ===
+  lam1(A_b) = 4.02292   lam2(A_b) = 5.0369   gap = 1.014   R_TF = sqrt(lam1) = 2.006
+  lam1(A_3b) = 7.45669   lam1(A_3b)-lam1 = 3.434   mu1 (constrained L2-Hessian gap) = 3.463
+  lam1(A_0) = 0.999999   beta*max u^2 = 3.711  (max principle: <= lam1)  min u = 5.1e-10
+  [a_u   ] rho_min = 0.5415  rho_max = 1.2815  kappa = 2.367  | argmax|eta_min| at x = +2.30
+           lower bounds: paper 1-lam1/lam2 = 0.201   new mu1/(mu1+|Z-|) = 0.4626   new explicit 1-lam1/lam1(A_3b) = 0.4605
+           upper bounds: paper 3 ;  monotone 1+lam1/lam2 = 1.799 ;  1+|Z+|/lam2 = 1.675
+  [a_0   ] rho_min = 0.56718  rho_max = 2.2567  kappa = 3.979  | argmax|eta_min| at x = +2.40
+           lower bounds: paper 1-lam1/lam2 = 0.201   new mu1/(mu1+|Z-|) = 0.4626   new explicit 1-lam1/lam1(A_3b) = 0.4605
+           upper bounds: paper 1+3 beta max u^2/lam1(A_0) = 12.13 ; monotone 1+2 lam1/lam1(A_0) = 9.046 ; 1+|Z+|/lam_T(A_0) = 3.37
+  [H1_0  ] rho_min = 1  rho_max = 43.661  kappa = 43.66  | argmax|eta_min| at x = +2.01
+           lower bounds: paper 1-lam1/lam2 = 0.201   new mu1/(mu1+|Z-|) = 1
+           upper bounds: paper 1+max(V+3 beta u^2)/(lam1(-Lap)+alpha) = 700.1 ; 1+|Z+|/lam1(G^-1) = 632.4
+
+=== beta = 100   (L = 9.271454158135931, N = 3000, h = 0.0062, time 123.1s) ===
+  lam1(A_b) = 17.8396   lam2(A_b) = 18.0976   gap = 0.258   R_TF = sqrt(lam1) = 4.224
+  lam1(A_3b) = 24.0203   lam1(A_3b)-lam1 = 6.181   mu1 (constrained L2-Hessian gap) = 6.181
+  lam1(A_0) = 0.999998   beta*max u^2 = 17.78  (max principle: <= lam1)  min u = 3.1e-14
+  [a_u   ] rho_min = 0.2806  rho_max = 1.7849  kappa = 6.361  | argmax|eta_min| at x = -4.43
+           lower bounds: paper 1-lam1/lam2 = 0.0143   new mu1/(mu1+|Z-|) = 0.2573   new explicit 1-lam1/lam1(A_3b) = 0.2573
+           upper bounds: paper 3 ;  monotone 1+lam1/lam2 = 1.986 ;  1+|Z+|/lam2 = 1.979
+  [a_0   ] rho_min = 0.29082  rho_max = 11.42  kappa = 39.27  | argmax|eta_min| at x = -4.47
+           lower bounds: paper 1-lam1/lam2 = 0.0143   new mu1/(mu1+|Z-|) = 0.2573   new explicit 1-lam1/lam1(A_3b) = 0.2573
+           upper bounds: paper 1+3 beta max u^2/lam1(A_0) = 54.35 ; monotone 1+2 lam1/lam1(A_0) = 36.68 ; 1+|Z+|/lam_T(A_0) = 12.84
+  [H1_0  ] rho_min = 1  rho_max = 153.84  kappa = 153.8  | argmax|eta_min| at x = -4.29
+           lower bounds: paper 1-lam1/lam2 = 0.0143   new mu1/(mu1+|Z-|) = 1
+           upper bounds: paper 1+max(V+3 beta u^2)/(lam1(-Lap)+alpha) = 2992 ; 1+|Z+|/lam1(G^-1) = 2370
+
+=== scaling summary (a_u metric) ===
+ beta      lam1      rho_min    rho_max   kappa    paper_LB   new_LB(mu)  new_LB(A3)  rho_min*lam1^(2/3)
+        1     1.383  6.7509e-01  1.0000    1.481  5.679e-01  6.135e-01  3.467e-01  0.8382
+       10     4.023  5.4150e-01  1.2815    2.367  2.013e-01  4.626e-01  4.605e-01  1.3697
+      100    17.840  2.8060e-01  1.7849    6.361  1.426e-02  2.573e-01  2.573e-01  1.9158
+
+=== scaling summary (a_0 metric) ===
+ beta      lam1      rho_min    rho_max   kappa    paper_LB   new_LB(mu)  new_LB(A3)
+        1     1.383  7.0303e-01  1.0038    1.428  5.679e-01  6.135e-01  3.467e-01
+       10     4.023  5.6718e-01  2.2567    3.979  2.013e-01  4.626e-01  4.605e-01
+      100    17.840  2.9082e-01  11.4200   39.269  1.426e-02  2.573e-01  2.573e-01
+
+=== scaling summary (H^1_0 metric) ===
+ beta      lam1      rho_min    rho_max   kappa    paper_LB   new_LB(mu)
+        1     1.383  1.0000e+00  38.5354   38.535  5.679e-01  1.000e+00
+       10     4.023  1.0000e+00  43.6609   43.661  2.013e-01  1.000e+00
+      100    17.840  1.0000e+00  153.8352  153.831  1.426e-02  1.000e+00

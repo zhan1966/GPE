@@ -1,0 +1,46 @@
+{
+  "tag": "stirrer_tf_n499_alpha1",
+  "potential": "stirrer",
+  "init": "tf",
+  "n": 499,
+  "L": 8.0,
+  "beta": 1600.0,
+  "alpha": 1.0,
+  "order": 2,
+  "backend": "jax",
+  "solver": "dense",
+  "precision": "fp64",
+  "maxit": 600,
+  "pcg_tol": 1e-08,
+  "pcg_max": 200,
+  "tmax": 5.0,
+  "E_ref": 9.01225655326139,
+  "lam_ref": 23.358241833883557,
+  "ref_source": "cache",
+  "methods": {
+    "h1_gd": {
+      "label": "modified $H^1$ flow",
+      "metric": "h1",
+      "algorithm": "gd",
+      "iterations": 582,
+      "seconds": 101.53658390045166,
+      "wall_seconds": 101.53683733940125,
+      "final_error": 9.983125437429408e-13,
+      "final_residue": 2.767457882151636e-06,
+      "linear_solves": 1164,
+      "inner_pcg_iterations": 0
+    },
+    "h1_cg": {
+      "label": "Riemannian CG, modified $H^1$",
+      "metric": "h1",
+      "algorithm": "cg",
+      "iterations": 62,
+      "seconds": 14.1892831325531,
+      "wall_seconds": 14.309362173080444,
+      "final_error": 8.135714324453147e-13,
+      "final_residue": 1.0101128453452212e-06,
+      "linear_solves": 124,
+      "inner_pcg_iterations": 0
+    }
+  }
+}

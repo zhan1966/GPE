@@ -1,0 +1,29 @@
+
+=== beta = 100: lam1 = 17.8396, sigma_T = 6.1806, lam1/(lam1+sigma_T) = 0.74269 ===
+  a_u  : rho_min = 0.28060  rho_max = 1.78494  kappa =    6.36  rate tau=1: 0.78494   optimal-tau rate (kappa-1)/(kappa+1): 0.72830
+  a_3u : rho_min = 0.25731  rho_max = 0.99962  kappa =    3.88  rate tau=1: 0.74269   optimal-tau rate (kappa-1)/(kappa+1): 0.59058
+  prediction for a_3u: rho_min = sigma_T/(lam1+sigma_T) = 0.25731, kappa ~ 1 + lam1/sigma_T = 3.89
+  GD exact line search, TF start        au  :   32 iterations,   32 banded solves  (0.1s)
+  GD exact line search, TF start        a3u :   21 iterations,   42 banded solves  (0.1s)
+  GD exact line search, perturbed start au  :   30 iterations,   30 banded solves  (0.1s)
+  GD exact line search, perturbed start a3u :   20 iterations,   40 banded solves  (0.1s)
+
+=== beta = 1000: lam1 = 82.5632, sigma_T = 10.4463, lam1/(lam1+sigma_T) = 0.88769 ===
+  a_u  : rho_min = 0.11668  rho_max = 1.94976  kappa =   16.71  rate tau=1: 0.94976   optimal-tau rate (kappa-1)/(kappa+1): 0.88707
+  a_3u : rho_min = 0.11231  rho_max = 0.99521  kappa =    8.86  rate tau=1: 0.88769   optimal-tau rate (kappa-1)/(kappa+1): 0.79718
+  prediction for a_3u: rho_min = sigma_T/(lam1+sigma_T) = 0.11231, kappa ~ 1 + lam1/sigma_T = 8.90
+  GD exact line search, TF start        au  :   84 iterations,   84 banded solves  (0.3s)
+  GD exact line search, TF start        a3u :   47 iterations,   94 banded solves  (0.2s)
+  GD exact line search, perturbed start au  :   86 iterations,   86 banded solves  (0.3s)
+  GD exact line search, perturbed start a3u :   47 iterations,   94 banded solves  (0.2s)
+
+=== beta = 10000: lam1 = 383.1586, sigma_T = 17.4786, lam1/(lam1+sigma_T) = 0.95637 ===
+  a_u  : rho_min = 0.04428  rho_max = 1.98898  kappa =   44.92  rate tau=1: 0.98898   optimal-tau rate (kappa-1)/(kappa+1): 0.95645
+  a_3u : rho_min = 0.04363  rho_max = 0.93707  kappa =   21.48  rate tau=1: 0.95637   optimal-tau rate (kappa-1)/(kappa+1): 0.91103
+  prediction for a_3u: rho_min = sigma_T/(lam1+sigma_T) = 0.04363, kappa ~ 1 + lam1/sigma_T = 22.92
+  GD exact line search, TF start        au  :  217 iterations,  217 banded solves  (0.9s)
+  GD exact line search, TF start        a3u :  114 iterations,  228 banded solves  (0.5s)
+  GD exact line search, perturbed start au  :  226 iterations,  226 banded solves  (0.8s)
+  GD exact line search, perturbed start a3u :  118 iterations,  236 banded solves  (0.5s)
+
+[exited with code 0]

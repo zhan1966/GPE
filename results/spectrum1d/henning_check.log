@@ -1,0 +1,5 @@
+lam1 = 71.15492 (Henning*2 = 71.15492)   lam2 = 71.21987 (Henning*2 = 71.21988)
+rho_max = 1.94192 (Henning: 1.94192)   rho_min = 0.12772   kappa = 15.20
+undamped inverse-iteration rate max(1-rho_min, rho_max-1) = 0.94192 (Henning |mu_1| = 0.94192)
+paper lower bound 1-lam1/lam2 = 9.12e-04;  new bound 1-lam1/lam1(A_3b) = 0.1225;  mu1/(mu1+lam1) = 0.1225
+optimal-step GD rate (kappa-1)/(kappa+1) = 0.8766

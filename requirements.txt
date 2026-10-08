@@ -1,0 +1,8 @@
+# Python 3.8 or later.
+# The figure scripts and the one- and two-dimensional spectra need only these three:
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.3
+# The three-dimensional runs on a GPU need a CUDA build of JAX:
+#   pip install --upgrade "jax[cuda12]"
+# Without a GPU, pass --backend numpy to run_metrics.py and rq_3d.py.
