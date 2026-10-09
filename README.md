@@ -4,6 +4,7 @@ Code and data for
 
 > Shixin Zheng and Xiangxiong Zhang,
 > **Riemannian Hessian analysis of Sobolev gradient flows for the Gross–Pitaevskii ground state problem**, 2026.
+> [paper.pdf](paper.pdf)
 
 The code runs Riemannian gradient descent and Riemannian conjugate gradients on
 the discrete sphere $\mathcal M=\{u:\langle u,u\rangle_h=1\}$ under seven
@@ -85,6 +86,7 @@ scripts, the variable `ell` is the paper's $\lambda(u)$ and `f` (option
 | `a3u_test.py` | the iteration counts of the modified $a_u$ metric quoted in Appendix A |
 | `henning_check.py` | reproduces Section 7.2 of Henning (2023), quoted in Appendix A |
 | `rq_2d_check.py`, `rq_3d_check.py`, `rq_3d_accuracy.py` | checks of the two- and three-dimensional eigensolvers against dense solvers |
+| `paper.pdf` | the paper |
 | `results/` | the data behind every figure and table, described below |
 
 `gpe3d.py`, `SEM.py` and `solvers.py` come from the code of Li, Zheng and
